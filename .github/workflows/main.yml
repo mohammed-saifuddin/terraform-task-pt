@@ -32,7 +32,7 @@ jobs:
 
     - name: Build, tag, and push Docker image
       run: |
-        IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:${{ env.IMAGE_TAG }}
+        IMAGE_URI= "129783607175.dkr.ecr.ap-south-1.amazonaws.com/medusa-backend"
         docker build -t $IMAGE_URI .
         docker push $IMAGE_URI
         echo "IMAGE_URI=$IMAGE_URI" >> $GITHUB_ENV
